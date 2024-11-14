@@ -5,9 +5,18 @@ import com.javalessons.services.PersonaServiceImpl;
 
 public class App {
     public static void main(String[] args) {
+        extracted();
+         IPersonaService persService = new PersonaServiceImpl();
+        persService.register(new person(1, "Pepe")); 
+    }
+
+    private static void extracted() {
         System.out.print("Hola mundo!!");
-         person pers1 = new person(1, "Pepe");
-        IPersonaService persService = new PersonaServiceImpl();
-        persService.register(pers1); 
+        int i=9;
+        calculator(i);
+    }
+
+    private static void calculator(int i) {
+        System.out.println(i*9);
     }
 }
